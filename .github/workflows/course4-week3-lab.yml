@@ -6,6 +6,9 @@ name: C4W3-Ungraded-Lab
 on:
   # Triggers the workflow on push request events only when there are changes in the desired path
   push:
+    branches:
+      - main
+      - master
     paths:
       - 'course4/week3-ungraded-labs/C4_W3_Lab_4_Github_Actions/**'
 
