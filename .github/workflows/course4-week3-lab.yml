@@ -6,15 +6,18 @@ name: C4W3-Ungraded-Lab
 on:
   # Triggers the workflow on push request events only when there are changes in the desired path
   push:
-    paths:
-      - 'course4/week3-ungraded-labs/C4_W3_Lab_4_Github_Actions/**'
-
+    branches:
+      - main
+      - master
+  pull_request:
+    types: [opened, reopened, edited, ready_for_review]
+    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "test"
-  test:
+  build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     defaults:
       run:
         # Use bash as the shell
